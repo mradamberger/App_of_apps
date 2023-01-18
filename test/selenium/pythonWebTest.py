@@ -12,9 +12,9 @@ class PythonOrgSearch(unittest.TestCase):
 
     def setUp(self):
         self.driver = webdriver.Firefox()
-        # self.driver = webdriver.Remote(
-        #     command_executor=selenium_URL,
-        #     options=webdriver.FirefoxOptions())
+        self.driver = webdriver.Remote(
+            command_executor=selenium_URL,
+            options=webdriver.FirefoxOptions())
 
     def test_search_in_python_org(self):
         driver = self.driver
