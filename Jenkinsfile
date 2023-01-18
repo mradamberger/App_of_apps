@@ -3,7 +3,7 @@ def backendImage="mradamberger/backend"
 def backendDockerTag=""
 def frontendDockerTag=""
 def dockerRegistry=""
-def registryCredentials="dockerhub"
+def registryCredentials="ce6bcfba-0c8b-432b-ba9e-732fc772cebb"
  
 
 
