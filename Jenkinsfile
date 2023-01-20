@@ -3,7 +3,7 @@ def backendImage="mradamberger/backend"
 def backendDockerTag=""
 def frontendDockerTag=""
 def dockerRegistry=""
-def registryCredentials="ce6bcfba-0c8b-432b-ba9e-732fc772cebb"
+def registryCredentials="dockerhub"
  
 
 
@@ -70,7 +70,7 @@ pipeline {
     stage('Run terraform') {
                 steps {
                     dir('Terraform') {                
-                        git branch: 'main', url: 'https://github.com/Panda-Academy-Core-2-0/Terraform'
+                        git branch: 'main', url: 'https://github.com/mradamberger/Terraform'
                         withAWS(credentials:'AWS', region: 'us-east-1') {
                                 sh 'terraform init && terraform apply -auto-approve -var-file="terraform.tfvars"'
                         } 
